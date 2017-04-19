@@ -35,5 +35,5 @@ so start your favorite database tool, cut&paste the jdbc-connection String and s
 
 
 ##### Thanks
-...to the real cool employee of https://www.codecentric.de/ 
+...to the real cool employees of https://www.codecentric.de/ 
 
