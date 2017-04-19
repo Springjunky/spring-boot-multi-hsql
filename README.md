@@ -31,7 +31,7 @@ Here is a little spoiler of the usage :-)
     
     Your JDBC-Connection-String:  jdbc:hsqldb:hsql://mydomain:4000/COOL_DB
 ```
-so start your favorite database tool, cut&paste the jdbc-connection String and see whats happens 
+so start your favorite database tool, cut&paste the jdbc-connection String and see whats happens or use the DataSource-Bean in your code.
 
 
 ##### Thanks
