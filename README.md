@@ -10,7 +10,7 @@ From time to time I need more than one _independet_ und _permanent_ databases to
 * do some rapid prototyping with permanent data
 
 Spring-Boot Autoconfigure just provide only *one* database out of the box, if that is enough for you, stop reading..
-to all the others ... this is comming soon ... here.
+to all the others ... feel free 
 
 #### Usage
 
