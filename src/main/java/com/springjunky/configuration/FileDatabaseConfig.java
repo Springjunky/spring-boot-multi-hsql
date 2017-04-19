@@ -1,10 +1,4 @@
-/* @(#) $HeadURL$
- * Hier folgt eine kurze Beschreibung der Datei
- * 
- * Copyright © DEVK 2009. All rights reserved.
- * 
- * $Id$
- */
+
 
 package com.springjunky.configuration;
 
