@@ -1,7 +1,7 @@
 # spring-boot-multi-hsql
 A Spring-Boot-Example with an unlimted an easy to configure HSQL file based _permanent_ database
 
-### My intro to GitHub  
+######  Yeah, my intro to GitHub :-) 
 ### Description
 
 From time to time I need more than one _independet_ und _permanent_ databases to
