@@ -25,20 +25,23 @@ pipeline {
                 sh '''
                 	mvn test
                 '''
-            }
+            } //Steps
             post {
                 success {
                     junit 'target/surefire-reports/**/*.xml' 
-                }
+                } 
+	    } //post
         } // stage Test
-       
-    
-   post { 
-        success {
+   } //Stages
+   post 
+   { 
+        success 
+	{
 	  echo 'OK '
   	}
-	failure {
-	  echo 'Fail'
+	failure 
+	{ 
+          echo 'Fail'
   	}
-
+   } //post
 } // Pipeline 
