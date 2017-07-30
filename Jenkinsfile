@@ -34,55 +34,14 @@ pipeline {
             }
             
         } // stage Test
-        stage ('Deploy')
-        {
-            steps {
-            
-            script   {
-                   timeout(time: 3, unit: 'SECONDS') {
-            
-                    input message: 'Soll ich das Ding nun auch mit Sonar analysieren  ?', ok: 'Yes'
-                    }
-               }
-            }
-        }
-        
-          stage("SonarQube analysis") {
-          steps {
-           
-        	        withSonarQubeEnv('sonar5') {
-        		     sh "env "
-        		     sh "mvn -Dsonar.host.url=${SONAR_HOST_URL} sonar:sonar -DskipTests -Dsonar.verbose=true "
-        	    }
-        	  
-            }// steps 
-          } // stage
-          
-/* Geht nicht ssl problem ?
-          stage("Quality Gate"){
-        	  steps {
-        	    script   {
-                   timeout(time: 1, unit: 'MINUTES') {
-                    def qg = waitForQualityGate()
-                       if (qg.status != 'OK') {
-                        error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                       } //if
-                  } //script
-               } //Timeout
-            } //Steps
-         } //Stage
-    */
-
-   }//stages 
+       
     
    post { 
         success {
-	  echo 'posting success to GitLab'
-        //  updateGitlabCommitStatus(name: 'jenkins-build', state: 'success')
+	  echo 'OK '
   	}
 	failure {
-	  echo 'postinng failure to GitLab'
-         // updateGitlabCommitStatus(name: 'jenkins-build', state: 'failed')
+	  echo 'Fail'
   	}
    }    
     
