@@ -9,7 +9,7 @@ pipeline {
       // And we'd really like to be sure that this build doesn't hang forever, so
       // let's time it out after an hour.
       timeout(time: 5, unit: 'MINUTES')
-    }
+    }  //options
     stages {
         stage('Build') {
             steps {
@@ -17,7 +17,6 @@ pipeline {
                 sh '''
                 	mvn compile
                 '''
-                
             }
         } // stage build
         stage('Test') {
@@ -31,8 +30,6 @@ pipeline {
                 success {
                     junit 'target/surefire-reports/**/*.xml' 
                 }
-            }
-            
         } // stage Test
        
     
